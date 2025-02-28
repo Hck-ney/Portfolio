@@ -1,0 +1,166 @@
+*{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.pageOne{
+    background-image: url(images/bg.jpg);
+    height: 760px;
+}
+.pageTwo{
+    background-image: url(images/second.jpg);
+    height:3500px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 0;
+}
+.pageTwo p{
+    margin: 0;
+    padding: 160px;
+    text-align: center;
+    font-size: 4rem;
+}
+.about-me-text p{
+    font-size: 2rem;
+}
+.myself{
+    margin-top: 40px;
+}
+.navbar{
+    text-align: center;
+    padding: 24px;
+}
+#myName{
+    color: #004080;
+    font-size: 2rem;
+}
+.navbar a{
+    margin: 24px;
+    font-size: 1.10rem;
+    text-decoration: none;
+}
+#name{
+    font-size: 3rem;
+}
+.introduction{
+    width: 50%;
+    display: inline-block;
+    font-size: 1.5rem;
+    height: 300px;
+    padding: 20px;
+    margin-left: 100px;
+}
+.image-container{
+    margin-left: 240px;
+    display: inline-block;
+    height: 250px;
+    width: 16%;
+    margin-top: 40px;
+}
+.introduction, .image-container{
+    vertical-align: top;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap to new lines */
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+  }
+  
+  .skill-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 28px;
+    font-weight: 550;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffe082, #a8c8e8); /* Yellow gradient */
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative; /* For pseudo-element */
+    overflow: hidden; /* Clip pseudo-element */
+  }
+  
+  .skill-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  }
+  
+  .skill-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+  
+  .skill-button:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .html {
+    color: black;
+  }
+  
+  .css {
+    color: black;
+  }
+  
+  .javascript {
+    color: black;
+  }
+  
+  .django {
+    color: black;
+  }
+  
+  .php {
+    color: black;
+  }
+  
+  .dart {
+    color: black;
+  }
+  
+  .flutter {
+    color: black;
+  }
+  
+  .java {
+    color: black;
+  }
+  
+  .python {
+    color: black;
+  }
+  .firebase {
+    color: black;
+  }
+  /* Added to create two rows */
+@media (min-width: 600px) { /* Adjust breakpoint as needed */
+    .skills-container {
+      max-width: 600px; /* Limit the container width */
+      margin: 0 auto; /* Center the container */
+    }
+  }
+  .contact a{
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 25px;
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+  }
+  .github img, .facebook img, .number img{
+    margin-left: 43%;
+    border: 1px solid rgb(56, 46, 46);
+    border: none;
+  }

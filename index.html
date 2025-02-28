@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Marquez</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+<div class="pageOne">
+    <header>
+        <div class="navbar">
+             <p id="name">Ian Marquez</p>
+             <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contacts">Contacts</a>
+             </nav>
+        </div>
+    </header>
+    <div class="myself">
+        <div class="introduction">
+            
+            <p>Hello! I am</p>
+            <p id="myName"><strong>Ian Marquez</strong> </p>
+            <p>Hello, and thanks for stopping by!<br>
+                 I'm a BSIT student diving headfirst<br>
+                  into the exciting realm of tech.<br>
+                   From coding to design, I'm constantly learning and creating.<br>
+                    Take a look around to see what I've been working on.</p>
+        </div>
+        <div class="image-container">
+        </div>
+    </div>
+</div>
+<div class="pageTwo">
+    <p id="about">About Me</p>
+    <div class="about-me-text">
+        <p>Hello! I'm a 21-year-old third-year BSIT student at Cavite State University - Bacoor Campus. My journey in the world of technology is just beginning, and I'm excited to learn and grow. I'm particularly interested in Web and Mobile Application Development and I'm eager to explore its possibilities. This page is a reflection of my ongoing progress and projects.</p>
+    </div>
+    <div class="skills-page">
+        <p id="skills">Skills</p>
+        <div class="skills-container">
+            <button class="skill-button html">HTML</button>
+            <button class="skill-button css">CSS</button>
+            <button class="skill-button javascript">JavaScript</button>
+            <button class="skill-button django">Django</button>
+            <button class="skill-button php">PHP</button>
+            <button class="skill-button dart">Dart</button>
+            <button class="skill-button flutter">Flutter</button>
+            <button class="skill-button java">Java</button>
+            <button class="skill-button python">Python</button>
+            <button class="skill-button firebase">Firebase</button>
+        </div>
+    </div>
+    <div class="project-container">
+        <p id="projects">Projects</p>
+        <div class="container">
+            <div class="item">
+              <div class="media-container">
+                <img src="images/djangoProj.jpg" alt="Django Project image">
+              </div>
+              <div class="caption">Django Application</div>
+            </div>
+          
+            <div class="item">
+              <div class="media-container">
+                <video width="100%" height="100%" controls>
+                  <source src="video/2d.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="caption">2d Game with Java</div>
+            </div>
+          
+            <div class="item">
+              <div class="media-container">
+                <img src="images/flutter.jpg" alt="Flutter login app" height="100%">
+              </div>
+              <div class="caption">Flutter App with Firebase Authentication</div>
+            </div>
+          </div>
+          
+          <style>
+          .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+          }
+          
+          .item {
+            width: 45%;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative; /* For overlay */
+            overflow: hidden; /* Clip overlay */
+          }
+          
+          .media-container {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            position: relative; /* For overlay */
+          }
+          
+          .media-container img,
+          .media-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease; /* Smooth zoom */
+          }
+          
+          .caption {
+            font-size: 16px;
+            padding: 5px;
+            position: relative;
+            z-index: 1; /* Above overlay */
+          }
+          
+          /* Hover Effects */
+          .item:hover .media-container img,
+          .item:hover .media-container video {
+            transform: scale(1.1); /* Zoom on hover */
+          }
+          
+          .item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+          
+          .item:hover::before {
+            opacity: 1; /* Show overlay on hover */
+          }
+          
+          /* Responsive adjustments */
+          @media (max-width: 768px) {
+            .item {
+              width: 90%;
+            }
+          }
+          </style>
+    </div>
+    <div class="contacts-container">
+        <p id="contacts">Contact Me</p>
+        <div class="contact github">
+          <img src="images/logo/GitHub.png" alt="Github logo" height="64px">
+          <a href="https://github.com/Hck-ney?tab=repositories">Hck-ney</a>
+        </div>
+        <div class="contact facebook">
+          <img src="images/logo/facebook.png" alt="facebook logo" height="64px">
+          <a href="https://web.facebook.com/ian.marquez.794/">Ian Marquez</a>
+        </div>
+        <div class="contact number">
+          <img src="images/logo/number.png" alt="number logo" height="64px">
+          <a>+63 9949377106</a>
+        </div>
+    </div>    
+</div>
+    
+</body>
+</html>
