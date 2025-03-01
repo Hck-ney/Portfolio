@@ -47,7 +47,7 @@
     font-size: 1.5rem;
     height: 300px;
     padding: 20px;
-    margin-left: 100px;
+    margin-left: 8%;
 }
 .image-container{
     margin-left: 240px;
@@ -71,7 +71,7 @@
     padding: 12px 25px;
     border: none;
     border-radius: 25px;
-    font-size: 28px;
+    font-size: 1.76rem;
     font-weight: 550;
     cursor: pointer;
     background: linear-gradient(135deg, #ffe082, #a8c8e8); /* Yellow gradient */
@@ -143,24 +143,142 @@
   .firebase {
     color: black;
   }
-  /* Added to create two rows */
-@media (min-width: 600px) { /* Adjust breakpoint as needed */
-    .skills-container {
-      max-width: 600px; /* Limit the container width */
-      margin: 0 auto; /* Center the container */
-    }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .item {
+    width: 45%;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative; /* For overlay */
+    overflow: hidden; /* Clip overlay */
+  }
+  
+  .media-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative; /* For overlay */
+  }
+  
+  .media-container img,
+  .media-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth zoom */
+  }
+  
+  .caption {
+    font-size: 16px;
+    padding: 5px;
+    position: relative;
+    z-index: 1; /* Above overlay */
+  }
+  
+  /* Hover Effects */
+  .item:hover .media-container img,
+  .item:hover .media-container video {
+    transform: scale(1.1); /* Zoom on hover */
+  }
+  
+  .item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .item:hover::before {
+    opacity: 1; /* Show overlay on hover */
   }
   .contact a{
     padding-top: 0;
     padding-left: 0;
-    padding-bottom: 25px;
-    font-size: 24px;
+    padding-bottom: 18px;
+    font-size: 1.5rem;
     display: inline-block;
     vertical-align: middle;
     text-decoration: none;
   }
-  .github img, .facebook img, .number img{
-    margin-left: 43%;
+  #image {
+    margin-left: 42.5%;
     border: 1px solid rgb(56, 46, 46);
     border: none;
+    vertical-align: bottom;
+    padding-bottom: 0;
+  }
+
+
+
+
+  @media (max-width: 600px){
+    .pageOne{
+      background-image: url(images/bg.jpg);
+      height: 760px;
+      max-width: 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    .pageTwo{
+      height:1950px;
+      max-width: 100%;;
+    }
+    .navbar a{
+      margin: 2px;
+      font-size: .90rem;
+      text-decoration: none;
+    }
+    .introduction{
+      width: 50%;
+      display: inline-block;
+      font-size: .90rem;
+      height: 300px;
+      padding: 20px;
+      margin-left: 8%;
+    }
+    .pageTwo p{
+      margin: 0;
+      padding: 8%;
+      text-align: center;
+      font-size: .9rem;
+    }
+    #about, #skills, #projects, #contacts{
+      font-size: 1.8rem;
+    }
+    #contacts{
+      margin-bottom: 25px;
+    }
+    .skill-button {
+      padding: 12px 15px;
+      font-size: 1rem;
+    }
+    .about-me-text p{
+      font-size: 1rem;
+    }
+    .item {
+      width: 90%;
+    }
+    .contact a{
+      padding-left: 0;
+      font-size: 1.2rem;
+      display: inline-block;
+      text-decoration: none;
+    }
+    #image{
+      margin-left: 18%;
+      border: 1px solid rgb(56, 46, 46);
+      border: none;
+      vertical-align: bottom;
+    }
+    
   }
